@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Listen & Sing</title>
+  <style>
+    body {
+      background-color: #1b1b2f;
+      color: #ffffff;
+      font-family: Georgia, serif;
+      margin: 0;
+      padding: 40px 20px 200px;
+      overflow-x: hidden;
+      position: relative;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+    }
+    h2 a {
+      color: #7ec8e3;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+    audio {
+      margin: 30px auto;
+      display: block;
+    }
+    .lyrics {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+    }
+    .line {
+      margin: 24px 0;
+      font-size: 1.2em;
+    }
+    .options {
+      display: inline-flex;
+      gap: 10px;
+      margin-left: 10px;
+    }
+    .choice {
+      background-color: #2f2f3d;
+      color: white;
+      border: 2px solid #555;
+      border-radius: 10px;
+      padding: 6px 16px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+    .choice.correct {
+      background-color: #2e7d32;
+    }
+    .choice.incorrect {
+      background-color: #c62828;
+    }
+    .choice:hover {
+      background-color: #3f3f50;
+    }
+    .drop {
+      position: absolute;
+      width: 40px;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+  </style>
+  <script>
+    function checkChoice(el, correct) {
+      const siblings = el.parentElement.querySelectorAll('.choice');
+      siblings.forEach(sib => sib.classList.remove('correct', 'incorrect'));
+      el.classList.add(el.textContent === correct ? 'correct' : 'incorrect');
+    }
+  </script>
+</head>
+<body>
+  <h1>Listen & Sing</h1>
+  <h2><a href="https://t.me/joinandgetinspired" target="_blank">Join&GetInspired</a></h2>
+  <audio controls>
+    <source src="Sia - Courage to Change SSAA vb.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="lyrics">
+    <div class="line">World, I want to 
+      <span class="options">
+        <span class="choice" onclick="checkChoice(this, 'leave')">leave</span>
+        <span class="choice" onclick="checkChoice(this, 'leave')">live</span>
+        <span class="choice" onclick="checkChoice(this, 'leave')">love</span>
+      </span>
+      you better
+    </div>
+    <div class="line">I want my life to 
+      <span class="options">
+        <span class="choice" onclick="checkChoice(this, 'matter')">matter</span>
+        <span class="choice" onclick="checkChoice(this, 'matter')">scatter</span>
+        <span class="choice" onclick="checkChoice(this, 'matter')">mutter</span>
+      </span>
+    </div>
+    <div class="line">I am afraid I have no 
+      <span class="options">
+        <span class="choice" onclick="checkChoice(this, 'purpose')">purpose</span>
+        <span class="choice" onclick="checkChoice(this, 'purpose')">person</span>
+        <span class="choice" onclick="checkChoice(this, 'purpose')">pause</span>
+      </span>
+      here
+    </div>
+    <div class="line">Rain it 
+      <span class="options">
+        <span class="choice" onclick="checkChoice(this, 'falls')">falls</span>
+        <span class="choice" onclick="checkChoice(this, 'falls')">calls</span>
+        <span class="choice" onclick="checkChoice(this, 'falls')">flows</span>
+      </span>
+    </div>
+    <div class="line">Sowing the seeds of 
+      <span class="options">
+        <span class="choice" onclick="checkChoice(this, 'love')">love</span>
+        <span class="choice" onclick="checkChoice(this, 'love')">hope</span>
+        <span class="choice" onclick="checkChoice(this, 'love')">fear</span>
+      </span>
+      and 
+      <span class="options">
+        <span class="choice" onclick="checkChoice(this, 'hope')">hope</span>
+        <span class="choice" onclick="checkChoice(this, 'hope')">shame</span>
+        <span class="choice" onclick="checkChoice(this, 'hope')">grief</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- 15 капелек в пустых зонах -->
+  <img src="drop.png" class="drop" style="top: 20px; left: 5%;">
+  <img src="drop.png" class="drop" style="top: 100px; left: 85%;">
+  <img src="drop.png" class="drop" style="top: 200px; left: 10%;">
+  <img src="drop.png" class="drop" style="top: 300px; left: 90%;">
+  <img src="drop.png" class="drop" style="top: 400px; left: 15%;">
+  <img src="drop.png" class="drop" style="top: 500px; left: 80%;">
+  <img src="drop.png" class="drop" style="top: 600px; left: 20%;">
+  <img src="drop.png" class="drop" style="top: 700px; left: 75%;">
+  <img src="drop.png" class="drop" style="top: 800px; left: 25%;">
+  <img src="drop.png" class="drop" style="top: 900px; left: 70%;">
+  <img src="drop.png" class="drop" style="top: 1000px; left: 30%;">
+  <img src="drop.png" class="drop" style="top: 1100px; left: 65%;">
+  <img src="drop.png" class="drop" style="top: 1200px; left: 35%;">
+  <img src="drop.png" class="drop" style="top: 1300px; left: 60%;">
+  <img src="drop.png" class="drop" style="top: 1400px; left: 45%;">
+
+  <!-- Еще 15 капелек -->
+  <img src="drop.png" class="drop" style="top: 1500px; left: 10%;">
+  <img src="drop.png" class="drop" style="top: 1550px; left: 85%;">
+  <img src="drop.png" class="drop" style="top: 1600px; left: 20%;">
+  <img src="drop.png" class="drop" style="top: 1650px; left: 75%;">
+  <img src="drop.png" class="drop" style="top: 1700px; left: 30%;">
+  <img src="drop.png" class="drop" style="top: 1750px; left: 70%;">
+  <img src="drop.png" class="drop" style="top: 1800px; left: 35%;">
+  <img src="drop.png" class="drop" style="top: 1850px; left: 65%;">
+  <img src="drop.png" class="drop" style="top: 1900px; left: 40%;">
+  <img src="drop.png" class="drop" style="top: 1950px; left: 60%;">
+  <img src="drop.png" class="drop" style="top: 2000px; left: 45%;">
+  <img src="drop.png" class="drop" style="top: 2050px; left: 55%;">
+  <img src="drop.png" class="drop" style="top: 2100px; left: 50%;">
+  <img src="drop.png" class="drop" style="top: 2150px; left: 25%;">
+  <img src="drop.png" class="drop" style="top: 2200px; left: 75%;">
+
+  <!-- Капли слева и справа от текста -->
+  <img src="drop.png" class="drop" style="top: 200px; left: 0%;">
+  <img src="drop.png" class="drop" style="top: 400px; left: 0%;">
+  <img src="drop.png" class="drop" style="top: 600px; left: 0%;">
+  <img src="drop.png" class="drop" style="top: 800px; left: 0%;">
+  <img src="drop.png" class="drop" style="top: 1000px; left: 0%;">
+  <img src="drop.png" class="drop" style="top: 200px; right: 0%;">
+  <img src="drop.png" class="drop" style="top: 400px; right: 0%;">
+  <img src="drop.png" class="drop" style="top: 600px; right: 0%;">
+  <img src="drop.png" class="drop" style="top: 800px; right: 0%;">
+  <img src="drop.png" class="drop" style="top: 1000px; right: 0%;">
+</body>
+</html>
